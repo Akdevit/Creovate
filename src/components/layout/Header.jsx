@@ -31,7 +31,7 @@ const Header = () => {
                         <Link to='/shadow'>Shadow Genratore</Link>
                     </li>
                     <li>
-                        <Link to='/'>Glass UI</Link>
+                        <Link to='/glass'>Glass UI</Link>
                     </li>
                     <li>
                         <Link to='/'>Color Picker</Link>

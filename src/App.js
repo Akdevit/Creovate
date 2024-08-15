@@ -8,6 +8,7 @@ import Blob from "./Pages/Blob";
 import Gradient from "./Pages/Gradient";
 import Waves from "./Pages/Waves";
 import Shadow from "./Pages/Shadow";
+import Glass from "./Pages/Glass";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/gradient" element={<Gradient/>} />
           <Route path="/waves" element={<Waves/>} />
           <Route path="/shadow" element={<Shadow/>} />
+          <Route path="/glass" element={<Glass/>} />
         </Routes>
       </BrowserRouter>
     </>
