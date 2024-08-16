@@ -9,6 +9,7 @@ import Gradient from "./Pages/Gradient";
 import Waves from "./Pages/Waves";
 import Shadow from "./Pages/Shadow";
 import Glass from "./Pages/Glass";
+import ColorPicker from "./Pages/ColorPicker";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/waves" element={<Waves/>} />
           <Route path="/shadow" element={<Shadow/>} />
           <Route path="/glass" element={<Glass/>} />
+          <Route path="/colorpicker" element={<ColorPicker/>} />
         </Routes>
       </BrowserRouter>
     </>
