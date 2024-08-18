@@ -75,7 +75,7 @@ const QrGenratore = () => {
                             ) : ( */}
                             <>
                                 <img
-                                    className='w-[400px] h-[400px]'
+                                    className='w-[100%] h-[100%]'
                                     src={qrUrl}
                                     alt='qr.jpg'
                                     onLoad={handleImageLoad}
