@@ -8,9 +8,11 @@ import toast from 'react-hot-toast';
 const ColorPicker = () => {
     const [colors, setColors] = useState([]);
     const [img, setImg] = useState(null);
-    const [url, setUrl] = useState(BirdImg);
+    // const [url, setUrl] = useState(BirdImg);
     const [pickcolors, setPickcolors] = useState('')
     const imgRef = useRef(null);
+
+    const url = BirdImg;
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
