@@ -52,7 +52,7 @@ const Blob = () => {
                         />
                     </div>
 
-                    <svg className="w-[100%] h-[100%] " viewBox="0 0 200 200">
+                    <svg className="xl:w-[500px] xl:h-[500px] md:w-[500px] md:h-[500px] w-[100%] h-[100%] " viewBox="0 0 200 200">
                         <path
                             fill={blobscolor}
                             d={blob}
