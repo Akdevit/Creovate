@@ -161,7 +161,7 @@ const GradientGen = () => {
                     <div className='xl:w-[33%] w-full h-[100%] p-4'>
                         <div className='w-full h-full flex items-center flex-col gap-2 overflow-y-auto'>
                             {colors.map((c, index) => (
-                                <div key={index} className='w-[60%] rounded-md p-1 h-auto flex gap-2 items-center bg-white border border-3 border-blue-900'>
+                                <div key={index} className='xl:w-[60%] lg:w-[60%] md:w-[60%] sm:w-[90%] w-[90%] rounded-md p-1 h-auto flex gap-2 items-center bg-white border border-3 border-blue-900'>
                                     <div className='w-[40px] h-[40px] rounded-full cursor-pointer' style={{ backgroundColor: c.color }} onClick={() => setSelectedColorIndex(index)} />
                                     <button className='w-[70%] bg-white p-2 rounded-md cursor-pointer' onClick={() => setSelectedColorIndex(index)}>
                                         {c.color}

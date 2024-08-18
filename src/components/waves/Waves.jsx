@@ -54,7 +54,7 @@ const Waves = () => {
           />
           <p>Frequency: {frequency}</p>
         </div>
-        <svg width="500" height="200" className="border">
+        <svg width="300" height="200" className="border">
           <path
             d={wavePath}
             fill="lightblue"

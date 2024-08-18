@@ -52,7 +52,7 @@ const Blob = () => {
                         />
                     </div>
 
-                    <svg className="w-[600px] h-[600px] " viewBox="0 0 200 200">
+                    <svg className="w-[100%] h-[100%] " viewBox="0 0 200 200">
                         <path
                             fill={blobscolor}
                             d={blob}
@@ -63,7 +63,7 @@ const Blob = () => {
 
                 </div>
                 {/* side baar controller */}
-                <div className='w-[100%] h-auto px-6 flex '>
+                <div className='w-[100%] h-auto xl:px-6 lg:px-6 md:px-6 sm:px-0 px-0 flex '>
 
                     <div className="w-[100%] h-[100%] p-4 justify-center flex flex-wrap gap-4 ">
                         {

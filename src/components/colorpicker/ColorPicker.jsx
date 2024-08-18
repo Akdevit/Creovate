@@ -125,7 +125,7 @@ const ColorPicker = () => {
 
     return (
         <div className='w-full xl:h-[100vh] h-auto bg-[#f6f8fc] flex justify-center items-center p-4'>
-            <div className='w-[80%] xl:h-[80vh] h-auto  bg-gray-200 rounded-md flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
+            <div className='w-[100%] xl:h-[80vh] h-auto  bg-gray-200 rounded-md flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
                 <div className='xl:w-[50%] w-full h-[100%]  p-4'>
                     {img && <img
                         ref={imgRef}
