@@ -43,10 +43,10 @@ const Shadowgen = () => {
     return (
         <>
             {/*  p-20 rounded-full*/}
-            <div className='w-full h-[100vh] flex'>
+            <div className='w-full h-[100vh] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:gap-0 lg:gap-0 md:gap-0 sm:gap-0 gap-8'>
                 {/* box */}
-                <div className='w-[70%] h-[100vh] bg-[#F6F8FC] flex justify-center items-center '>
-                    <div className={`w-[500px] h-[500px] bg-white  p-6 flex flex-col justify-around items-center  ${circle ? 'rounded-full' : 'rounded-md'}`}
+                <div className='xl:w-[70%] lg:w-[70%] md:w-[50%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex justify-center items-center p-6'>
+                    <div className={`xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] bg-white  p-6 flex flex-col justify-around items-center  ${circle ? 'rounded-full' : 'rounded-md'}`}
                         style={{
                             boxShadow: `${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})`
                         }}
@@ -55,7 +55,7 @@ const Shadowgen = () => {
                     </div>
                 </div>
                 {/* controllers */}
-                <div className='w-[30%] h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
+                <div className='xl:w-[30%] lg:w-[30%] md:w-[50%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
                     {/* Horizontal Length controller */}
                     <div className='w-full flex flex-col'>
                         <p>Horizontal Length</p>
@@ -158,8 +158,8 @@ const Shadowgen = () => {
             {/* modal */}
             {
                 modal && (
-                    <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center '>
-                        <div className='w-[50%] h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
+                    <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center p-4'>
+                        <div className='xl:w-[50%] lg:w-[50%] md:w-[70%] sm:w-[100%] w-full h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
                             <div className='w-fll flex justify-end'>
                                 <RxCross1 onClick={() => setModal(false)} className='text-3xl font-semibold cursor-pointer' />
                             </div>

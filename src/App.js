@@ -10,6 +10,7 @@ import Waves from "./Pages/Waves";
 import Shadow from "./Pages/Shadow";
 import Glass from "./Pages/Glass";
 import ColorPicker from "./Pages/ColorPicker";
+import Qr from "./Pages/Qr";
 function App() {
   return (
     <>
@@ -17,12 +18,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/color" element={<Colors />} />
-          <Route path="/blob" element={<Blob/>} />
-          <Route path="/gradient" element={<Gradient/>} />
-          <Route path="/waves" element={<Waves/>} />
-          <Route path="/shadow" element={<Shadow/>} />
-          <Route path="/glass" element={<Glass/>} />
-          <Route path="/colorpicker" element={<ColorPicker/>} />
+          <Route path="/blob" element={<Blob />} />
+          <Route path="/gradient" element={<Gradient />} />
+          <Route path="/waves" element={<Waves />} />
+          <Route path="/shadow" element={<Shadow />} />
+          <Route path="/glass" element={<Glass />} />
+          <Route path="/colorpicker" element={<ColorPicker />} />
+          <Route path="/Qr" element={<Qr />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -30,3 +32,7 @@ function App() {
 }
 
 export default App;
+
+/* QR code Genratore 
+https://api.qrserver.com/v1/create-qr-code/?&data=ssss
+*/

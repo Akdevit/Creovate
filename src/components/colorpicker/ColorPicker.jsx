@@ -86,6 +86,12 @@ const ColorPicker = () => {
         const b = parseInt(hex.slice(5, 7), 16);
         return `${r},${g},${b}`;
     };
+    /* convert rgb to hex */
+    const rgbValuesToHex = (rgb) => {
+        const [r, g, b] = rgb.split(',').map(Number);
+        return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
+    };
+
 
 
     /* copy code hex */
@@ -116,9 +122,9 @@ const ColorPicker = () => {
     }
 
     return (
-        <div className='w-full h-[100vh] bg-[#f6f8fc] flex justify-center items-center'>
-            <div className='w-[80%] h-[80vh] bg-gray-200 rounded-md flex'>
-                <div className='w-[50%] h-[100%]  p-4'>
+        <div className='w-full xl:h-[100vh] h-auto bg-[#f6f8fc] flex justify-center items-center p-4'>
+            <div className='w-[80%] xl:h-[80vh] h-auto  bg-gray-200 rounded-md flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
+                <div className='xl:w-[50%] w-full h-[100%]  p-4'>
                     {img && <img
                         ref={imgRef}
                         className='w-full h-full object-contain'
@@ -127,7 +133,7 @@ const ColorPicker = () => {
                         onLoad={processImage}
                     />}
                 </div>
-                <div className='w-[50%] h-[100%]  p-4 flex flex-col justify-evenly'>
+                <div className='xl:w-[50%] w-full h-[100%]  p-4 flex gap-4 flex-col justify-evenly'>
                     <div className='flex gap-4'>
                         <button
                             type="button"
@@ -164,15 +170,22 @@ const ColorPicker = () => {
                         <CiPickerHalf className='text-2xl' />
                     </button>
                     <div className='w-full h-[40%] flex flex-wrap gap-2'>
-                        {colors.map((color, index) => (
-                            <div key={index} className='w-[100px] h-[100px] cursor-pointer rounded-md' style={{ backgroundColor: `rgb(${color})` }}></div>
-                        ))}
+                        {colors.map((color, index) => {
+                            const hexColor = rgbValuesToHex(color);
+                            return (
+                                <div key={index}
+                                    onClick={() => navigator.clipboard.writeText(hexColor).then(() => { toast.success('copied !') })}
+                                    className='w-[100px] h-[100px] cursor-pointer rounded-md flex justify-center items-center '
+                                    style={{ backgroundColor: `rgb(${color})` }}>
+                                    {hexColor}
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
         </div>
     );
-
 };
 
 export default ColorPicker;

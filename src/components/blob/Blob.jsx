@@ -40,11 +40,11 @@ const Blob = () => {
             <div className='w-full h-auto  '>
 
                 {/* blob show area */}
-                <div className='w-full h-[80vh] flex   items-center justify-center gap-8 p-6 relative'>
+                <div className='w-full h-auto flex xl:flex-row flex-col-reverse  items-center justify-center gap-8 p-6 relative'>
                     <div onClick={() => setSvgmodal(true)} className='w-[40px] h-[40px] bg-white rounded-md shadow-md cursor-pointer flex justify-center items-center absolute top-8 right-8'>
                         <FaCode className='text-2xl ' />
                     </div>
-                    <div className='w-[30%] h-auto '>
+                    <div className='xl:w-[30%] w-[100%] h-[30%] '>
                         <SwatchesPicker
                             width='100%' height='100%'
                             color={blobscolor}
@@ -88,12 +88,12 @@ const Blob = () => {
             {
                 svgmodal && (
                     <>
-                        <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center '>
-                            <div className='w-[50%] h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
+                        <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center p-4'>
+                            <div className='xl:w-[50%] lg:w-[50%] md:w-[70%] sm:w-[100%] w-full h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
                                 <div className='w-fll flex justify-end'>
                                     <RxCross1 className='text-3xl font-semibold cursor-pointer' onClick={() => setSvgmodal(false)} />
                                 </div>
-                                <p className='font-semibold '>
+                                <p className='font-semibold break-words'>
                                     {SVG}
                                 </p>
                                 <button onClick={copySVG} className='w-full p-3 hover:bg-green-300 border'>Copy To Clipboard</button>

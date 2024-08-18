@@ -52,12 +52,12 @@ const Palettes = () => {
     return (
         <div className='w-full h-auto '>
             <h1 className='text-2xl font-semibold p-4'>Our Color Palettes</h1>
-            <p className='w-[40%] px-4'>Discover over 100,000 curated color palettes to inspire your design projects and find the perfect hues for any creative need.</p>
+            <p className='xl:w-[40%] lg:w-[40%] md:w-[40%] sm:w-[90%] w-[90%] px-4'>Discover over 100,000 curated color palettes to inspire your design projects and find the perfect hues for any creative need.</p>
             {
                 loading ? <><h1 className='text-center'>lodding...</h1></> : <>
                     <div className='w-full h-auto  p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                         {palettes?.map((palette, index) => (
-                            <div key={index} className='w-[300px] h-[280px] rounded-md bg-white overflow-hidden'>
+                            <div key={index} className='w-[100%] xl:h-[280px] lg:h-[280px] md:h-[280px] sm:h-[280px] h-[250px] rounded-md bg-white overflow-hidden'>
                                 {palette?.slice(0, 4).map((color, colorIndex) => (
                                     <div
                                         key={colorIndex}

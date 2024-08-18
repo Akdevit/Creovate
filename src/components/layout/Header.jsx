@@ -36,6 +36,9 @@ const Header = () => {
                     <li>
                         <Link to='/colorpicker'>Color Picker</Link>
                     </li>
+                    <li>
+                        <Link to='/Qr'>QR Genratore</Link>
+                    </li>
 
 
                 </ul>

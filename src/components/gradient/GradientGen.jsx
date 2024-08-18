@@ -78,16 +78,16 @@ const GradientGen = () => {
         <>
             {/* show gradient */}
             <div
-                className='w-full h-[50vh] mt-2 '
+                className='w-full h-[50vh]  mt-2 '
                 style={{ background: gradientStyle }}
             />
 
             {/* controllers */}
-            <div className='w-full h-[50vh]  p-4'>
-                <div className='w-full h-[100%] bg-[#F6F8FC] shadow-md rounded-sm flex justify-between'>
+            <div className='w-full xl:h-[50vh] h-auto  p-4'>
+                <div className='w-full h-[100%] bg-[#F6F8FC] shadow-md rounded-sm flex xl:flex-row lg:flex-row md:flex-row sm:flex-col justify-between flex-col'>
 
                     {/* show color */}
-                    <div className='w-[30%] h-auto  flex justify-center items-center'>
+                    <div className='xl:w-[30%] lg:w-[100%] md:w-[80%] sm:w-[100%] w-full h-auto  flex justify-center items-center'>
                         <ChromePicker
                             color={colors[selectedColorIndex].color}
                             onChangeComplete={handleChangeComplete}
@@ -98,7 +98,7 @@ const GradientGen = () => {
                     </div>
 
                     {/* show color controllers */}
-                    <div className='w-[33%] h-[100%]  p-4 flex flex-col gap-4 '>
+                    <div className='xl:w-[33%] lg:w-[30%] md:w-[80%] sm:w-[100%] w-full h-[100%]  p-4 flex flex-col gap-4 '>
                         <HuePicker
                             color={colors[selectedColorIndex].color}
                             onChangeComplete={handleChangeComplete}
@@ -125,12 +125,16 @@ const GradientGen = () => {
                                 {deg}°
                             </div>
                         </div>
-                        <div className='w-full h-auto  flex gap-4'>
-                            <div className='w-[20%] h-auto flex flex-col gap-2 justify-center items-center'>
+                        <div className='w-full h-auto  flex   gap-4'>
+                            {/* <div className='w-[20%] h-auto flex flex-col gap-2 justify-center items-center'>
                                 <input value={colors[selectedColorIndex].color} type='text' className='w-[100px] h-[40px] rounded-md bg-white border text-center flex justify-center items-center border-3.5 border-blue-900 ' readOnly />
                                 <p className='font-bold text-gray-800'>HEX</p>
-                            </div>
-                            <div className='w-[80%] h-auto flex gap-2 justify-between items-center'>
+                            </div> */}
+                            <div className='w-[100%] h-auto flex gap-2 flex-wrap justify-between items-center'>
+                                <div className='w-auto h-auto flex flex-col gap-2 justify-center items-center'>
+                                    <input value={colors[selectedColorIndex].color} type='text' className='w-[100px] h-[40px] rounded-md bg-white border text-center flex justify-center items-center border-3.5 border-blue-900 ' readOnly />
+                                    <p className='font-bold text-gray-800'>HEX</p>
+                                </div>
                                 <div className='w-auto h-auto flex flex-col gap-2 justify-center items-center'>
                                     <input value={colors[selectedColorIndex].rgb.r} type='number' className='w-[80px] h-[40px] rounded-md bg-white border text-center flex justify-center items-center border-3 border-blue-900 ' onChange={(e) => handleRgbChange(e, 'r')} />
                                     <p className='font-bold text-gray-800'>R</p>
@@ -154,13 +158,13 @@ const GradientGen = () => {
                             <button onClick={() => setChangebgformate(false)} className={`w-[100px] h-[40px] rounded-md ${!chnagebgformate ? 'bg-blue-800 text-white' : 'border border-3 border-blue-900'} font-bold`}>Radial</button>
                         </div>
                     </div>
-                    <div className='w-[33%] h-[100%] p-4'>
+                    <div className='xl:w-[33%] w-full h-[100%] p-4'>
                         <div className='w-full h-full flex items-center flex-col gap-2 overflow-y-auto'>
                             {colors.map((c, index) => (
                                 <div key={index} className='w-[60%] rounded-md p-1 h-auto flex gap-2 items-center bg-white border border-3 border-blue-900'>
-                                    <div className='w-[40px] h-[40px] rounded-full cursor-pointer' style={{ backgroundColor: c.color }}  onClick={() => setSelectedColorIndex(index)}/>
+                                    <div className='w-[40px] h-[40px] rounded-full cursor-pointer' style={{ backgroundColor: c.color }} onClick={() => setSelectedColorIndex(index)} />
                                     <button className='w-[70%] bg-white p-2 rounded-md cursor-pointer' onClick={() => setSelectedColorIndex(index)}>
-                                         {c.color}
+                                        {c.color}
                                     </button>
 
                                     <button className='p-2 bg-red-500 text-white rounded-md' onClick={() => removeColor(index)}>
@@ -181,7 +185,7 @@ const GradientGen = () => {
 
 
             <div className='w-full h-auto rounded-sm bg-white p-4 shadow-md'>
-                <div className='w-full h-auto bg-gray-200 rounded-md p-4 flex flex-col gap-4'>
+                <div className='w-full h-auto bg-gray-200 rounded-md p-4 flex flex-col gap-4  break-words'>
                     <p className='font-bold'><span className='text-[#0d377f] font-bold'>background</span> : {colors[selectedColorIndex].color}</p>
                     <p className='font-bold'><span className='text-[#0d377f] font-bold'>background</span> : {gradientStyle}</p>
                     <p className='font-bold'><span className='text-[#0d377f] font-bold'>background</span> : {moz}</p>

@@ -35,8 +35,8 @@ const GlassUi = () => {
     }
     return (
         <>
-            <div className='w-full h-[100vh] flex'>
-                <div className='w-[70%] h-[100vh] bg-[#F6F8FC] flex justify-center items-center'
+            <div className='w-full h-[100vh] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
+                <div className='xl:w-[70%] lg:w-[70%] md:w-[60%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex justify-center items-center p-6'
                     style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                     <div className='w-[500px] h-[500px] p-6 flex '
@@ -52,7 +52,7 @@ const GlassUi = () => {
                         <p>This is an example of a glassmorphism effect.</p>
                     </div>
                 </div>
-                <div className='w-[30%] h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
+                <div className='xl:w-[30%] lg:w-[30%] md:w-[40%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
                     {/* Blur Length controller */}
                     <div className='w-full flex flex-col'>
                         <p>Blur</p>
@@ -123,8 +123,8 @@ const GlassUi = () => {
             </div>
             {/* Modal */}
             {modal && (
-                <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center'>
-                    <div className='w-[50%] h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
+                <div className='w-full h-[100%] fixed z-50 top-0 left-0 flex justify-center items-center p-4'>
+                    <div className='xl:w-[50%] lg:w-[50%] md:w-[70%] sm:w-[100%] w-full h-auto bg-white rounded-md shadow-md flex flex-col gap-4 p-6'>
                         <div className='w-full flex justify-end'>
                             <RxCross1 onClick={() => setModal(false)} className='text-3xl font-semibold cursor-pointer' />
                         </div>
