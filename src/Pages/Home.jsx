@@ -1,11 +1,29 @@
 import React from 'react'
 import Header from '../components/layout/Header'
+import Hero from '../components/home/Hero'
+import PalettesSection from '../components/home/PalettesSection'
+import GradientSection from '../components/home/GradientSection'
+import BlobSection from '../components/home/BlobSection'
+import ShadowSection from '../components/home/ShadowSection'
+import GlassSection from '../components/home/GlassSection'
+import ColorPickerSection from '../components/home/ColorPickerSection'
+import QrSection from '../components/home/QrSection'
+import TypographySection from '../components/home/TypographySection'
 const Home = () => {
     return (
         <>
             <Header />
-            <h1>Home
-                Home</h1>
+            <Hero />
+            <PalettesSection />
+            <GradientSection />
+            <BlobSection/>
+            <ShadowSection/>
+            <GlassSection/>
+            <ColorPickerSection/>
+            <QrSection/>
+            <TypographySection/>
+
+
         </>
     )
 }

@@ -57,7 +57,7 @@ const Palettes = () => {
                 loading ? <><h1 className='text-center'>lodding...</h1></> : <>
                     <div className='w-full h-auto  p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                         {palettes?.map((palette, index) => (
-                            <div key={index} className='w-[100%] xl:h-[280px] lg:h-[280px] md:h-[280px] sm:h-[280px] h-[220px] rounded-md bg-white overflow-hidden'>
+                            <div key={index} className='w-[100%] xl:h-[280px] lg:h-[280px] md:h-[280px] sm:h-[280px] h-[220px] rounded-md bg-white shadow-lg overflow-hidden p-3'>
                                 {palette?.slice(0, 4).map((color, colorIndex) => (
                                     <div
                                         key={colorIndex}

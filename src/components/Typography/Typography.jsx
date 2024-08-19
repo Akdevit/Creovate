@@ -65,7 +65,7 @@ const Typography = () => {
                                 color,
                                 textShadow: `${textShadowOffsetX}px ${textShadowOffsetY}px ${textShadowBlur}px ${textShadowColor}`,
                             }}
-                            className="p-4 bg-gray-200 rounded-lg"
+                            className="p-4 bg-gray-200 rounded-lg break-words"
                         >
                             {text}
                         </div>
