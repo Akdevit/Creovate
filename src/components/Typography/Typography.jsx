@@ -166,7 +166,7 @@ const Typography = () => {
                             </div>
 
                             <div className='w-full flex-col'>
-                                <label className="block mb-2 text-gray-700">Text Shadow Color</label>
+                                <label className="block mb-2 text-gray-700">Shadow Color</label>
                                 <input
                                     type="color"
                                     className="block w-full px-4 py-2 mb-4 rounded border-gray-300  outline-0 border "

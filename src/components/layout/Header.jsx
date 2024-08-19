@@ -31,9 +31,7 @@ const Header = () => {
                     <li>
                         <Link to='/blob'>Blob Maker</Link>
                     </li>
-                    <li>
-                        <Link to='/waves'>Waves Generator</Link>
-                    </li>
+                  
                     <li>
                         <Link to='/shadow'>Shadow Generator</Link>
                     </li>
@@ -76,9 +74,7 @@ const Header = () => {
                     <li>
                         <Link to='/blob' onClick={toggleMenu}>Blob Maker</Link>
                     </li>
-                    <li>
-                        <Link to='/waves' onClick={toggleMenu}>Waves Generator</Link>
-                    </li>
+
                     <li>
                         <Link to='/shadow' onClick={toggleMenu}>Shadow Generator</Link>
                     </li>
