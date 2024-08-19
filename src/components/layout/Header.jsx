@@ -46,6 +46,10 @@ const Header = () => {
                     <li>
                         <Link to='/Qr'>QR Generator</Link>
                     </li>
+                    <li>
+                        <Link to='/TypographyGenerator'>Typography</Link>
+                    </li>
+                
                 </ul>
                 {/* Hamburger menu */}
                 <div className='lg:hidden'>

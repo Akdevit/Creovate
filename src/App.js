@@ -11,6 +11,7 @@ import Shadow from "./Pages/Shadow";
 import Glass from "./Pages/Glass";
 import ColorPicker from "./Pages/ColorPicker";
 import Qr from "./Pages/Qr";
+import TypographyGenerator from "./Pages/TypographyGenerator";
 function App() {
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/glass" element={<Glass />} />
           <Route path="/colorpicker" element={<ColorPicker />} />
           <Route path="/Qr" element={<Qr />} />
+          <Route path="/TypographyGenerator" element={<TypographyGenerator />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -32,7 +34,3 @@ function App() {
 }
 
 export default App;
-
-/* QR code Genratore 
-https://api.qrserver.com/v1/create-qr-code/?&data=ssss
-*/
