@@ -91,6 +91,9 @@ const Header = () => {
                     <li>
                         <Link to='/Qr' onClick={toggleMenu}>QR Generator</Link>
                     </li>
+                    <li>
+                        <Link to='/TypographyGenerator'  onClick={toggleMenu}>Typography</Link>
+                    </li>
                 </ul>
             </div>
         </>
