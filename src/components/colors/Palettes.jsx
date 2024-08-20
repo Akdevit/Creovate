@@ -36,7 +36,7 @@ const Palettes = () => {
                 }
             })
             .catch(error => console.error('Error fetching palettes:', error));
-    }, [currentPage,pagination.totalPages]);
+    }, [currentPage, pagination.totalPages]);
 
     const handleColorClick = (color) => {
         navigator.clipboard.writeText(color)
@@ -68,7 +68,7 @@ const Palettes = () => {
                 loading ? <><h1 className='text-center'>Loading...</h1></> : <>
                     <div className='w-full h-auto p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                         {palettes?.map((palette, index) => (
-                            <div key={index} className='w-[100%] xl:h-[280px] lg:h-[280px] md:h-[280px] sm:h-[280px] h-[220px] rounded-md bg-white shadow-lg overflow-hidden p-3'>
+                            <div key={index} className='w-[100%] xl:h-[280px] lg:h-[280px] md:h-[280px] sm:h-[280px] h-[220px] rounded-md bg-white shadow-lg overflow-hidden xl:p-3 lg:p-3 md:p-3 sm:p-3 p-2'>
                                 {palette?.slice(0, 4).map((color, colorIndex) => (
                                     <div
                                         key={colorIndex}
@@ -112,16 +112,17 @@ const Palettes = () => {
                             <button
                                 key={visiblePageRange.start + index}
                                 onClick={() => setCurrentPage(visiblePageRange.start + index)}
-                                className={`w-[30px] h-[30px] rounded-full flex items-center justify-center text-sm font-semibold ${
-                                    visiblePageRange.start + index === currentPage
+                                className={`w-[30px] h-[30px] rounded-full flex items-center justify-center text-sm font-semibold ${visiblePageRange.start + index === currentPage
                                         ? 'bg-[#32A994] text-white'
                                         : 'bg-white text-[#32A994] hover:bg-[#f0f0f0]'
-                                } border border-[#32A994] transition-colors duration-300`}
+                                    } border border-[#32A994] transition-colors duration-300`}
                             >
                                 {visiblePageRange.start + index}
                             </button>
                         ))}
                     </div>
+
+
 
                     {/* Next Button */}
                     {
@@ -135,6 +136,9 @@ const Palettes = () => {
                             </button>
                         )
                     }
+
+                    {/* totale pages show */}
+                    <p>totalPages {pagination.totalPages}</p>
                 </div>
             </div>
         </div>

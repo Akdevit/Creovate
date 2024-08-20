@@ -27,12 +27,12 @@ const Typography = () => {
     const code = `
     {
     font-family: "${fontFamily}";
-    font-size: "${fontSize}px"; 
-    font-weight:" ${fontWeight}";
-    font-style: "${fontStyle}";
-    text-decoration: "${textDecoration}";
-    color: "${color}"; 
-    text-shadow:" ${textShadowOffsetX}px ${textShadowOffsetY}px ${textShadowBlur}px ${textShadowColor}";
+    font-size: ${fontSize}px; 
+    font-weight:${fontWeight};
+    font-style: ${fontStyle};
+    text-decoration: ${textDecoration};
+    color: ${color}; 
+    text-shadow:${textShadowOffsetX}px ${textShadowOffsetY}px ${textShadowBlur}px ${textShadowColor};
     }
  `
 
@@ -256,14 +256,3 @@ export default Typography;
 
 
 
-/*  
-    {
-    font-family: "Times New Roman";
-    font-size: "300px"; 
-    font-weight:" 800";
-    font-style: "normal";
-    text-decoration: "none";
-    color: "#1d7d95"; 
-    text-shadow:" 12px 12px 3px #a8e7f0";
-    }
-  */

@@ -59,11 +59,11 @@ const GradientGen = () => {
 `
     const copyToClipboard = () => {
         const content = `
-        background :"${colors[selectedColorIndex].color}"
-        background :"${gradientStyle}"
-        background :"${moz}"
-        background : "${webkit}"
-        filter : "${filter}"
+        background :${colors[selectedColorIndex].color}
+        background :${gradientStyle}
+        background :${moz}
+        background : ${webkit}
+        filter : ${filter}
       `;
         navigator.clipboard.writeText(content)
             .then(() => {

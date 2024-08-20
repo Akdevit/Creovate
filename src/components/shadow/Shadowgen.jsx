@@ -21,13 +21,13 @@ const Shadowgen = () => {
     };
 
     const boxShadowValue = `
-        -webkit-box-shadow: "${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})";
-        -moz-box-shadow: "${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})";
-        box-shadow: "${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})";
+        -webkit-box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});
+        -moz-box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});
+        box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});
     `;
     const moz = ` -moz-box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});`
     const webkit = `-webkit-box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});`
-    const shadow = ` box-shadow: "${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})";
+    const shadow = ` box-shadow: ${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100});
 `
 
     const copyToClipboard = () => {

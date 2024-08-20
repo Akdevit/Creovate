@@ -9,6 +9,7 @@ import GlassSection from '../components/home/GlassSection'
 import ColorPickerSection from '../components/home/ColorPickerSection'
 import QrSection from '../components/home/QrSection'
 import TypographySection from '../components/home/TypographySection'
+import Footer from '../components/layout/Footer'
 const Home = () => {
     return (
         <>
@@ -22,8 +23,7 @@ const Home = () => {
             <ColorPickerSection/>
             <QrSection/>
             <TypographySection/>
-
-
+            <Footer/>
         </>
     )
 }

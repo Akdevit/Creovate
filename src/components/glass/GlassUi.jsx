@@ -18,11 +18,11 @@ const GlassUi = () => {
     };
 
     const GlassCode = `
-      backdropFilter: "blur(${blur}px)",
-      background: "rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})",
-      borderRadius: "${borderRadius} px",
-      border: "${border}px solid rgba(255, 255, 255, 0.3)",
-      boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+      backdropFilter: blur(${blur}px),
+      background: rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100}),
+      borderRadius: "${borderRadius} px,
+      border: ${border}px solid rgba(255, 255, 255, 0.3),
+      boxShadow: 0 4px 30px rgba(0, 0, 0, 0.1),
     `
     const CopyGlassCode = () => {
         navigator.clipboard.writeText(GlassCode.trim())
@@ -34,6 +34,7 @@ const GlassUi = () => {
             })
     }
     return (
+        
         <>
             <div className='w-full h-[100vh] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
                 <div className='xl:w-[70%] lg:w-[70%] md:w-[60%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex justify-center items-center p-6'

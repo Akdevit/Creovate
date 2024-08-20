@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { RxCross1 } from "react-icons/rx";
-
+import Icon from "../../Images/icon.jpg"
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,9 +14,12 @@ const Header = () => {
         <>
             <div className='w-full h-16 bg-gray-100 flex justify-between items-center px-4'>
                 {/* Site name */}
-                <div className='w-auto h-auto'>
-                    <h1 className='font-bold'>Site name icons here</h1>
-                </div>
+                <Link to='/'>
+                    <div className='w-auto h-auto flex gap-4 items-center cursor-pointer'>
+                        <img className='w-[50px] h-[50px] rounded-md' src={Icon} alt='icon.jpg' />
+                        <h1 className='text-2xl font-semibold'>Creovate</h1>
+                    </div>
+                </Link>
                 {/* Links */}
                 <ul className='hidden lg:flex gap-4'>
                     <li>
@@ -31,7 +34,7 @@ const Header = () => {
                     <li>
                         <Link to='/blob'>Blob Maker</Link>
                     </li>
-                  
+
                     <li>
                         <Link to='/shadow'>Shadow Generator</Link>
                     </li>
@@ -47,7 +50,7 @@ const Header = () => {
                     <li>
                         <Link to='/TypographyGenerator'>Typography</Link>
                     </li>
-                
+
                 </ul>
                 {/* Hamburger menu */}
                 <div className='lg:hidden'>
@@ -88,7 +91,7 @@ const Header = () => {
                         <Link to='/Qr' onClick={toggleMenu}>QR Generator</Link>
                     </li>
                     <li>
-                        <Link to='/TypographyGenerator'  onClick={toggleMenu}>Typography</Link>
+                        <Link to='/TypographyGenerator' onClick={toggleMenu}>Typography</Link>
                     </li>
                 </ul>
             </div>
