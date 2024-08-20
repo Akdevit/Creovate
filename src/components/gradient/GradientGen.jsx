@@ -204,10 +204,5 @@ export default GradientGen;
 
 
 
-/* background: radial-gradient(circle, rgb(36,42,51,1) 0%, rgb(19,22,27,1) 100%); */
-/* background: linear-gradient(198deg, #1BF4E5 0%, #BE53CB 100%) */
-
-
-
 
 

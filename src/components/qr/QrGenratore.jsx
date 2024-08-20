@@ -45,7 +45,7 @@ const QrGenratore = () => {
     return (
         <>
             <div className='w-full h-[100vh] flex justify-center items-center'>
-                <div className='w-[80%] h-[80%] bg-gray-100 rounded-md'>
+                <div className='xl:w-[80%] lg:w-[80%] md:w-[80%] sm:w-[90%] w-[98%] h-[80%] bg-gray-100 rounded-md'>
                     
                     <div className='w-full h-auto flex p-4 gap-4'>
                         <input

@@ -113,8 +113,8 @@ const Palettes = () => {
                                 key={visiblePageRange.start + index}
                                 onClick={() => setCurrentPage(visiblePageRange.start + index)}
                                 className={`w-[30px] h-[30px] rounded-full flex items-center justify-center text-sm font-semibold ${visiblePageRange.start + index === currentPage
-                                        ? 'bg-[#32A994] text-white'
-                                        : 'bg-white text-[#32A994] hover:bg-[#f0f0f0]'
+                                    ? 'bg-[#32A994] text-white'
+                                    : 'bg-white text-[#32A994] hover:bg-[#f0f0f0]'
                                     } border border-[#32A994] transition-colors duration-300`}
                             >
                                 {visiblePageRange.start + index}
@@ -137,10 +137,10 @@ const Palettes = () => {
                         )
                     }
 
-                    {/* totale pages show */}
-                    <p>totalPages {pagination.totalPages}</p>
                 </div>
             </div>
+                {/* totale pages show */}
+                <p className='text-center mb-12'>totalPages {pagination.totalPages}</p>
         </div>
     );
 };

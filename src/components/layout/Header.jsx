@@ -64,33 +64,33 @@ const Header = () => {
                 <div className='w-full h-auto flex justify-end p-8'>
                     <RxCross1 className='text-3xl cursor-pointer' onClick={toggleMenu} />
                 </div>
-                <ul className='flex flex-col items-center gap-4 mt-16'>
-                    <li>
-                        <Link to='/' onClick={toggleMenu}>Home</Link>
+                <ul className='flex flex-col items-center gap-4 '>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
+                        <Link to='/' onClick={toggleMenu} >Home</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/color' onClick={toggleMenu}>Color's Palettes</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/gradient' onClick={toggleMenu}>Gradient Generator</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/blob' onClick={toggleMenu}>Blob Maker</Link>
                     </li>
 
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/shadow' onClick={toggleMenu}>Shadow Generator</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/glass' onClick={toggleMenu}>Glass UI</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/colorpicker' onClick={toggleMenu}>Color Picker</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/Qr' onClick={toggleMenu}>QR Generator</Link>
                     </li>
-                    <li>
+                    <li className='w-[90%] p-2  border-b-2 border-gray-500'>
                         <Link to='/TypographyGenerator' onClick={toggleMenu}>Typography</Link>
                     </li>
                 </ul>
