@@ -4,6 +4,7 @@ import { FaCode } from "react-icons/fa6";
 import { RxCross1 } from 'react-icons/rx';
 import BackgroundImage from "../../Images/background.jpg";
 import toast from 'react-hot-toast';
+import IconImg from "../../Images/icon.jpg"
 
 const GlassUi = () => {
     const [color, setColor] = useState({ r: 255, g: 255, b: 255, a: 0.15 });
@@ -34,13 +35,13 @@ const GlassUi = () => {
             })
     }
     return (
-        
+
         <>
-            <div className='w-full h-[100vh] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
-                <div className='xl:w-[70%] lg:w-[70%] md:w-[60%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex justify-center items-center p-6'
+            <div className='w-full h-auto flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col'>
+                <div className='xl:w-[70%] lg:w-[70%] md:w-[60%] sm:w-[100%] w-full h-auto bg-[#F6F8FC] flex justify-center items-center p-6'
                     style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
-                    <div className='w-[500px] h-[500px] p-6 flex '
+                    <div className='w-[500px] h-[500px] p-6 flex justify-center items-center'
                         style={{
                             backdropFilter: `blur(${blur}px)`,
                             background: `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})`,
@@ -49,11 +50,11 @@ const GlassUi = () => {
                             boxShadow: `0 4px 30px rgba(0, 0, 0, 0.1)`,
                         }}
                     >
-                        <h1>Glass UI Card</h1>
-                        <p>This is an example of a glassmorphism effect.</p>
+                        <img src={IconImg} className='w-[130px] h-[130px]  rounded-md object-cover' alt='icon-jpg' />
+
                     </div>
                 </div>
-                <div className='xl:w-[30%] lg:w-[30%] md:w-[40%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
+                <div className='xl:w-[30%] lg:w-[30%] md:w-[40%] sm:w-[100%] w-full h-auto bg-[#F6F8FC] flex flex-col p-4 gap-4'>
                     {/* Blur Length controller */}
                     <div className='w-full flex flex-col'>
                         <p>Blur</p>

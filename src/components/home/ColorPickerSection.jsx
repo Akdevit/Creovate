@@ -1,5 +1,6 @@
 import React from 'react'
 import ColorPickerImg from "../../Images/colorpicker.avif"
+import { Link } from 'react-router-dom'
 const ColorPickerSection = () => {
     return (
         <>
@@ -12,7 +13,9 @@ const ColorPickerSection = () => {
                 <div className='w-full h-auto  p-4'>
                     <h1 className='text-2xl font-bold'>Precise Color Picking</h1>
                     <p className='mt-4 xl:text-xl text-lg'>Easily pick and customize colors for your design projects. Use our Color Picker to select and refine colors with precision. Whether you need a specific hex code or want to explore different shades, our tool offers a user-friendly interface to help you find the perfect color. Save your favorite colors and create palettes that enhance your designs.</p>
-                    <button className=' mt-6 p-2 bg-[#CE805A] text-white rounded-md shadow-xl'>Pick Colors</button>
+                    <Link to='/colorpicker'>
+                        <button className=' mt-6 p-2 bg-[#CE805A] text-white rounded-md shadow-xl'>Pick Colors</button>
+                    </Link>
                 </div>
 
 

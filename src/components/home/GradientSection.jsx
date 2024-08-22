@@ -1,5 +1,6 @@
 import React from 'react'
 import GredientImg from "../../Images/gredient.jpg"
+import { Link } from 'react-router-dom'
 const GradientSection = () => {
     return (
         <>
@@ -12,7 +13,9 @@ const GradientSection = () => {
                 <div className='w-full h-auto  p-4'>
                     <h1 className='text-2xl font-bold'> generate Stunning Gradients</h1>
                     <p className='mt-4 xl:text-xl text-lg'>Effortlessly create stunning gradients with our Gradient Generator. Customize colors, angles, and types to perfectly match your design needs. Whether you're looking for linear or radial gradients, our tool offers a wide range of options to help you achieve the perfect look for your project. Experiment with different combinations and directions to add depth and dimension to your designs.</p>
-                    <button className=' mt-6 p-2 gradient text-white rounded-md'>Generate Gradients</button>
+                    <Link to='/gradient'>
+                        <button className=' mt-6 p-2 gradient text-white rounded-md'>Generate Gradients</button>
+                    </Link>
                 </div>
 
 

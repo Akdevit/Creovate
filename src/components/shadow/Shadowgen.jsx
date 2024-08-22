@@ -5,7 +5,7 @@ import { FaRegCircle } from "react-icons/fa6";
 import { FaRegSquare } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import { RxCross1 } from 'react-icons/rx';
-
+import IconImg from "../../Images/icon.jpg"
 const Shadowgen = () => {
     const [horizontal, setHorizontal] = useState(0);
     const [vertical, setVertical] = useState(4);
@@ -43,19 +43,19 @@ const Shadowgen = () => {
     return (
         <>
             {/*  p-20 rounded-full*/}
-            <div className='w-full h-[100vh] flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:gap-0 lg:gap-0 md:gap-0 sm:gap-0 gap-8'>
+            <div className='w-full  h-auto flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:gap-0 lg:gap-0 md:gap-0 sm:gap-0 gap-8'>
                 {/* box */}
-                <div className='xl:w-[70%] lg:w-[70%] md:w-[50%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex justify-center items-center p-6'>
+                <div className='xl:w-[70%] lg:w-[70%] md:w-[50%] sm:w-[100%] w-full h-auto bg-[#F6F8FC] flex justify-center items-center p-6'>
                     <div className={`xl:w-[500px] xl:h-[500px] w-[300px] h-[300px] bg-white  p-6 flex flex-col justify-around items-center  ${circle ? 'rounded-full' : 'rounded-md'}`}
                         style={{
                             boxShadow: `${inset ? 'inset' : ''} ${horizontal}px ${vertical}px ${blur}px ${spread}px rgba(${color.r}, ${color.g}, ${color.b}, ${opacity / 100})`
                         }}
                     >
-
+                        <img src={IconImg} className='w-[130px] h-[130px] object-cover' alt='icon-jpg' />
                     </div>
                 </div>
                 {/* controllers */}
-                <div className='xl:w-[30%] lg:w-[30%] md:w-[50%] sm:w-[100%] w-full h-[100vh] bg-[#F6F8FC] flex flex-col p-4 gap-4'>
+                <div className='xl:w-[30%] lg:w-[30%] md:w-[50%] sm:w-[100%] w-full h-auto bg-[#F6F8FC] flex flex-col p-4 gap-4'>
                     {/* Horizontal Length controller */}
                     <div className='w-full flex flex-col'>
                         <p>Horizontal Length</p>
@@ -150,8 +150,8 @@ const Shadowgen = () => {
                         </button>
 
 
+                        <SketchPicker color={color} onChange={handleColorChange} />
                     </div>
-                    <SketchPicker color={color} onChange={handleColorChange} />
 
                 </div>
             </div>
